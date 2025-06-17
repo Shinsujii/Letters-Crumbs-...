@@ -1,0 +1,532 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.home-button img {
+    width: 13vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+a {
+    color: black;
+    font-family: 'BookkGothic';
+    text-decoration: none;
+    list-style: none;
+    line-height: 0.8;
+}
+
+@font-face {
+    font-family: 'BookkGothic';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkGothic-Bd.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/mainweb.jpg);
+    /* 배경 이미지 */
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    /* 또는 scroll로 변경 */
+}
+
+.overlay-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
+
+.image-with-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
+
+.image-with-text img {
+    width: 100%;
+    height: auto;
+}
+
+.text-overlay {
+    width: 100%;
+}
+
+.word {
+    position: relative;
+    width: 100%;
+    /* 링크 영역 기준 */
+    height: 100%;
+    /* pointer-events: none; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.word1-link {
+    top: 20%;
+    left: 43%;
+}
+
+.word1 img {
+    top: 3%;
+    left: 10%;
+}
+
+.word2-link {
+    top: 41%;
+    left: 25%;
+}
+
+.word3-link {
+    top: 40%;
+    left: 41%;
+}
+
+.word3 img {
+    top: 20%;
+    left: 10%;
+}
+
+.word4-link {
+    top: 40%;
+    right: 25%;
+}
+
+.word4 img {
+    top: 20%;
+    left: 10%;
+}
+
+.word5-link {
+    position: relative;
+    top: 10%;
+    left: 22%;
+    z-index: 1020;
+}
+
+.word5-wrapper {
+    position: absolute;
+    top: 64%;
+    left: 42%;
+    width: 15%;
+    /* 기존 word-link 크기 */
+    height: 15%;
+    z-index: 1020;
+}
+
+.word5 img {
+    position: absolute;
+    top: 0%;
+    left: 15%;
+    opacity: 0;
+    width: 300% !important;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 1025;
+}
+.word5-wrapper:hover .word5 img {
+    opacity: 1;
+    pointer-events: auto; /* 선택적으로 필요 */
+}
+.social-text {
+    position: absolute;
+    /* fixed → absolute */
+    bottom: 8%;
+    left: 20%;
+    color: rgb(0, 0, 0);
+    font-size: 0.8rem;
+    transition: opacity 0.3s ease;
+    z-index: 1005;
+
+}
+
+.social-text a:hover {
+    text-decoration: underline;
+}
+
+.social-text a {
+    line-height: 0.2;
+    z-index: 1003;
+    display: block;
+    text-decoration: none;
+}
+.word5-link:hover .social-text {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.word-link {
+    position: absolute;
+    width: 15%;
+    /* 넓은 hover 영역 */
+    height: 15%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* 이미지 숨기기 초기 상태 */
+.word img {
+    position: absolute;
+    /* ✨ 위치 조절 가능하게 */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    width: 50%;
+    height: auto;
+    pointer-events: none;
+    /* 마우스 클릭 안되게 */
+}
+.word:not(.word5) img {
+    width: 50%;
+}
+/* hover 시 이미지 나타남 + 클릭 가능해짐 */
+.word-link:hover img {
+    opacity: 1;
+    pointer-events: none;
+    z-index: 1020;
+}
+
+/* .mobile-menu-imgs {
+    display: none;
+} */
+.mobile-menu-imgs a {
+    position: relative;
+    display: inline-block;
+    /* 기본 inline 요소라면 */
+}
+
+/* 퍼스트레터 */
+.firstletter {
+    display: block;
+    position: absolute;
+    /* 필요하면 위치 조절 */
+    top: 30%;
+    /* 조정 필요 */
+    left: 40%;
+    /* 조정 필요 */
+    /* 필요에 따라 크기나 스타일 추가 */
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: block;
+    /* 항상 block 유지, 숨길 때 opacity와 transform으로 처리 */
+    pointer-events: none;
+    /* 마우스 이벤트 차단 */
+    z-index: 10;
+    width: 30%;
+}
+
+.firstletter img {
+    height: auto;
+    display: block;
+    width: 100%;
+}
+
+.mobile-menu-imgs a:hover .firstletter {
+    opacity: 1;
+    pointer-events: auto;
+    /* 마우스 이벤트 활성화 (필요하면) */
+}
+
+a:hover .firstletter {
+    display: block;
+}
+
+/* 센트래터스 */
+.sent {
+    display: block;
+    position: absolute;
+    /* 필요하면 위치 조절 */
+    top: 30%;
+    /* 조정 필요 */
+    left: 40%;
+    /* 조정 필요 */
+    /* 필요에 따라 크기나 스타일 추가 */
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: block;
+    /* 항상 block 유지, 숨길 때 opacity와 transform으로 처리 */
+    pointer-events: none;
+    /* 마우스 이벤트 차단 */
+    z-index: 10;
+    width: 35%;
+}
+
+.sent img {
+    height: auto;
+    display: block;
+    width: 100%;
+}
+
+.mobile-menu-imgs a:hover .sent {
+    opacity: 1;
+    pointer-events: auto;
+    /* 마우스 이벤트 활성화 (필요하면) */
+}
+
+a:hover .sent {
+    display: block;
+}
+
+/* 딜리버리 */
+.del {
+    display: block;
+    position: absolute;
+    /* 필요하면 위치 조절 */
+    top: 60%;
+    /* 조정 필요 */
+    left: 40%;
+    /* 조정 필요 */
+    /* 필요에 따라 크기나 스타일 추가 */
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: block;
+    /* 항상 block 유지, 숨길 때 opacity와 transform으로 처리 */
+    pointer-events: none;
+    /* 마우스 이벤트 차단 */
+    z-index: 10;
+    width: 35%;
+}
+
+.del img {
+    height: auto;
+    display: block;
+    width: 100%;
+}
+
+.mobile-menu-imgs a:hover .del {
+    opacity: 1;
+    pointer-events: auto;
+    /* 마우스 이벤트 활성화 (필요하면) */
+}
+
+a:hover .del {
+    display: block;
+}
+
+/* drawn */
+.drawn {
+    display: block;
+    position: absolute;
+    /* 필요하면 위치 조절 */
+    top: 60%;
+    /* 조정 필요 */
+    left: 40%;
+    /* 조정 필요 */
+    /* 필요에 따라 크기나 스타일 추가 */
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: block;
+    /* 항상 block 유지, 숨길 때 opacity와 transform으로 처리 */
+    pointer-events: none;
+    /* 마우스 이벤트 차단 */
+    z-index: 10;
+    width: 30%;
+}
+
+.drawn img {
+    height: auto;
+    display: block;
+    width: 100%;
+}
+
+.mobile-menu-imgs a:hover .drawn {
+    opacity: 1;
+    pointer-events: auto;
+    /* 마우스 이벤트 활성화 (필요하면) */
+}
+
+a:hover .drawn {
+    display: block;
+}
+
+/* sent */
+.sent {
+    display: block;
+    position: absolute;
+    /* 필요하면 위치 조절 */
+    top: 20%;
+    /* 조정 필요 */
+    left: 30%;
+    /* 조정 필요 */
+    /* 필요에 따라 크기나 스타일 추가 */
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: block;
+    /* 항상 block 유지, 숨길 때 opacity와 transform으로 처리 */
+    pointer-events: none;
+    /* 마우스 이벤트 차단 */
+    z-index: 10;
+    width: 35%;
+}
+
+.sent img {
+    height: auto;
+    display: block;
+    width: 100%;
+}
+
+.mobile-menu-imgs a:hover .sent {
+    opacity: 1;
+    pointer-events: auto;
+    /* 마우스 이벤트 활성화 (필요하면) */
+}
+
+a:hover .sent {
+    display: block;
+}
+
+/* delivery */
+.bg5 {
+    position: relative;
+}
+
+.post5-wrapper {
+    position: relative;
+    /* 기준 요소로 설정 */
+    display: inline-block;
+}
+
+.delivery {
+    position: absolute;
+    /* 필요하면 위치 조절 */
+    top: 5%;
+    /* 조정 필요 */
+    left: 30%;
+    /* 조정 필요 */
+    /* 필요에 따라 크기나 스타일 추가 */
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: block;
+    /* 항상 block 유지, 숨길 때 opacity와 transform으로 처리 */
+    pointer-events: none;
+    /* 마우스 이벤트 차단 */
+    z-index: 10;
+    width: 35%;
+}
+
+.delivery img {
+    height: auto;
+    display: block;
+    width: 100%;
+}
+
+.mobile-menu-imgs a:hover .delivery {
+    opacity: 1;
+    pointer-events: auto;
+    /* 마우스 이벤트 활성화 (필요하면) */
+    z-index: 1020;
+}
+
+a:hover .delivery {
+    display: block;
+}
+
+/* 소셜텍스트 */
+.social-text1 {
+    position: absolute;
+    bottom: 5%;
+    left: 39%;
+    color: rgb(0, 0, 0);
+    font-size: 0.7rem;
+    pointer-events: auto;
+    margin-bottom: 3%;
+}
+
+.social-text1 a {
+    display: block;
+    line-height: 0.1;
+}
+
+.social-text1 a:hover {
+    text-decoration: underline;
+}
+
+.social-text1 a:last-child {
+    margin-bottom: 0;
+    /* 마지막 요소는 간격 제거 */
+}
+
+@media (min-width: 768px) {
+    .mobile-menu-imgs {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mobile-menu-imgs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .bg1, .bg2, .bg3, .bg4, .bg5 {
+        width: 60vw;
+        /* 필요 시 너비 조정 가능 */
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    /* 모바일에서 배경 이미지 숨기기 */
+    #image1,
+    #image2 {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .container {
+        background-image: url(./img/mainmobile@3x.jpg);
+        /* 모바일용 배경 */
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh; /* 뷰포트 높이만큼 채우기 */
+        width: 100vw; /* 가로 꽉 채우기 */
+        object-fit: cover;
+    }
+
+    .home-button img {
+        width: 10vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+    z-index: 2000;
+
+    }
+.content {
+  position: relative;
+  z-index: 1;
+}
+.fixed-bg {
+   display: none !important;
+}
+}
+
