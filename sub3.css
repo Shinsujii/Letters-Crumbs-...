@@ -1,0 +1,631 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+.home-button img {
+    width: 15vh;
+    position: absolute;
+    top: 8vw;
+    left: 3vw;
+}
+
+a {
+    color: black;
+    font-family: 'BookkGothic';
+    text-decoration: none;
+    list-style: none;
+    line-height: 0.8;
+}
+
+@font-face {
+    font-family: 'BookkGothic';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkGothic-Bd.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #F8EED9;
+    ;
+    background-position: center;
+}
+
+.mobile-menu-imgs a {
+    position: relative;
+    display: inline-block;
+    /* 기본 inline 요소라면 */
+}
+
+/* 퍼스트레터 */
+.firstletter {
+    display: block;
+    position: absolute;
+    /* 필요하면 위치 조절 */
+    top: 30%;
+    /* 조정 필요 */
+    left: 40%;
+    /* 조정 필요 */
+    /* 필요에 따라 크기나 스타일 추가 */
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: block;
+    /* 항상 block 유지, 숨길 때 opacity와 transform으로 처리 */
+    pointer-events: none;
+    /* 마우스 이벤트 차단 */
+    z-index: 10;
+    width: 30%;
+}
+
+.firstletter img {
+    height: auto;
+    display: block;
+    width: 100%;
+}
+
+.mobile-menu-imgs a:hover .firstletter {
+    opacity: 1;
+    pointer-events: auto;
+    /* 마우스 이벤트 활성화 (필요하면) */
+}
+
+a:hover .firstletter {
+    display: block;
+}
+
+/* 센트래터스 */
+.sent {
+    display: block;
+    position: absolute;
+    /* 필요하면 위치 조절 */
+    top: 30%;
+    /* 조정 필요 */
+    left: 40%;
+    /* 조정 필요 */
+    /* 필요에 따라 크기나 스타일 추가 */
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: block;
+    /* 항상 block 유지, 숨길 때 opacity와 transform으로 처리 */
+    pointer-events: none;
+    /* 마우스 이벤트 차단 */
+    z-index: 10;
+    width: 35%;
+}
+
+.sent img {
+    height: auto;
+    display: block;
+    width: 100%;
+}
+
+.mobile-menu-imgs a:hover .sent {
+    opacity: 1;
+    pointer-events: auto;
+    /* 마우스 이벤트 활성화 (필요하면) */
+}
+
+a:hover .sent {
+    display: block;
+}
+
+/* 딜리버리 */
+.del {
+    display: block;
+    position: absolute;
+    /* 필요하면 위치 조절 */
+    top: 60%;
+    /* 조정 필요 */
+    left: 40%;
+    /* 조정 필요 */
+    /* 필요에 따라 크기나 스타일 추가 */
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: block;
+    /* 항상 block 유지, 숨길 때 opacity와 transform으로 처리 */
+    pointer-events: none;
+    /* 마우스 이벤트 차단 */
+    z-index: 10;
+    width: 35%;
+}
+
+.del img {
+    height: auto;
+    display: block;
+    width: 100%;
+}
+
+.mobile-menu-imgs a:hover .del {
+    opacity: 1;
+    pointer-events: auto;
+    /* 마우스 이벤트 활성화 (필요하면) */
+}
+
+a:hover .del {
+    display: block;
+}
+
+/* drawn */
+.drawn {
+    display: block;
+    position: absolute;
+    /* 필요하면 위치 조절 */
+    top: 60%;
+    /* 조정 필요 */
+    left: 40%;
+    /* 조정 필요 */
+    /* 필요에 따라 크기나 스타일 추가 */
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: block;
+    /* 항상 block 유지, 숨길 때 opacity와 transform으로 처리 */
+    pointer-events: none;
+    /* 마우스 이벤트 차단 */
+    z-index: 10;
+    width: 30%;
+}
+
+.drawn img {
+    height: auto;
+    display: block;
+    width: 100%;
+}
+
+.mobile-menu-imgs a:hover .drawn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+a:hover .drawn {
+    display: block;
+}
+
+/* sent */
+.sent {
+    display: block;
+    position: absolute;
+    /* 필요하면 위치 조절 */
+    top: 20%;
+    /* 조정 필요 */
+    left: 30%;
+    /* 조정 필요 */
+    /* 필요에 따라 크기나 스타일 추가 */
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: block;
+    /* 항상 block 유지, 숨길 때 opacity와 transform으로 처리 */
+    pointer-events: none;
+    /* 마우스 이벤트 차단 */
+    z-index: 10;
+    width: 35%;
+}
+
+.sent img {
+    height: auto;
+    display: block;
+    width: 100%;
+}
+
+.mobile-menu-imgs a:hover .sent {
+    opacity: 1;
+    pointer-events: auto;
+    /* 마우스 이벤트 활성화 (필요하면) */
+}
+
+a:hover .sent {
+    display: block;
+}
+
+/* delivery */
+.bg5 {
+    position: relative;
+}
+
+.delivery {
+    display: block;
+    position: absolute;
+    /* 필요하면 위치 조절 */
+    top: 5%;
+    /* 조정 필요 */
+    left: 30%;
+    /* 조정 필요 */
+    /* 필요에 따라 크기나 스타일 추가 */
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: block;
+    /* 항상 block 유지, 숨길 때 opacity와 transform으로 처리 */
+    pointer-events: none;
+    /* 마우스 이벤트 차단 */
+    z-index: 10;
+    width: 35%;
+}
+
+.delivery img {
+    height: auto;
+    display: block;
+    width: 100%;
+}
+
+.mobile-menu-imgs a:hover .delivery {
+    opacity: 1;
+    pointer-events: auto;
+    /* 마우스 이벤트 활성화 (필요하면) */
+}
+
+a:hover .delivery {
+    display: block;
+}
+
+/* 소셜텍스트 */
+.bg5-wrapper {
+    position: relative;
+    /* 기준이 되는 박스 */
+    overflow: hidden;
+    /* ✅ 이게 포인트: 텍스트가 튀어나가도 잘려서 안 보임 */
+}
+
+.social-text1 {
+    font-family: 'BookkGothic';
+    position: absolute;
+    top: 43%;
+    right: 15%;
+    color: rgb(0, 0, 0);
+    font-size: 0.7vw;
+    margin-bottom: 3%;
+    z-index: 10;
+}
+
+.social-text1 a {
+    display: block;
+    line-height: 0.2;
+    text-decoration: none;
+}
+
+.social-text1 a:hover {
+    text-decoration: underline;
+}
+
+.social-text1 a:last-child {
+    margin-bottom: 0;
+    /* 마지막 요소는 간격 제거 */
+}
+
+.mobile-menu-imgs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2%;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.mobile-menu-imgs img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    /* 화면 기준 너비 설정 (조절 가능) */
+    min-width: 80px;
+    /* 너무 작아지는 것 방지 */
+    flex-shrink: 1;
+    /* 공간 줄어들 때 유연하게 줄어듦 */
+    transition: all 0.3s ease;
+    margin-bottom: 5%;
+}
+
+/* 메뉴 */
+
+.menuhome {
+    display: none;
+}
+
+.mobile-menu-imgs1 {
+    display: none;
+}
+
+/* 메뉴안 */
+.let {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    width: 100vw;
+    /* 화면 전체 너비 */
+    max-width: 7000px;
+    /* 전체 최대 너비 제한 */
+}
+
+.let1 {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 10%;
+    width: 5%;
+    /* 2:8 비율 중 2 */
+    margin-top: 8vh;
+    margin-left: 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: calc(80vh - 8vh - 20px);
+    /* let 높이에서 margin-top과 여백 빼기 */
+    max-height: 600px;
+    /* 최대 높이 제한 추가 */
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    /* Firefox */
+    flex-grow: 1;
+    /* 남은 공간 모두 차지 */
+}
+
+.let1::-webkit-scrollbar {
+    display: none;
+}
+
+.let1 img {
+    width: 70%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.let1 img:hover {
+    transform: scale(1.05);
+}
+
+.let1 a {
+    display: block;
+    /* a 태그를 블록으로 만들면 이미지가 정확히 꽉 참 */
+    margin: 0;
+    /* 기본 마진 제거 */
+    padding: 0;
+    /* 기본 패딩 제거 */
+}
+
+.preview {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 80%;
+    width: 80%;
+    /* 2:8 비율 중 8 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+    /* 미리보기 영역에서 스크롤 제거 */
+    margin-bottom: 10%;
+}
+
+.preview img {
+    max-width: 100%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.footer {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 100;
+    font-family: 'BookkGothic-Bd';
+    white-space: nowrap;
+    /* 줄 바꿈 방지 */
+    position: fixed;
+    /* 아래 고정 */
+    box-sizing: border-box;
+    font-size: 0.7rem;
+    z-index: 9999;
+}
+
+.footer p {
+    font-family: 'BookkGothic-Bd';
+}
+
+@media screen and (max-width: 767px) {
+
+    .body,
+    .html {
+        overflow: scroll;
+    }
+
+    .mobile-menu-imgs {
+        display: none !important;
+    }
+
+    .del1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .del1 img {
+        max-width: 55%;
+        height: auto;
+        margin-top: 7%;
+    }
+
+    /* 메뉴 */
+    .menu-wrapper {
+        position: relative;
+    }
+
+    .menuhome {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        /* 이거 꼭 있어야 오른쪽에 붙음 */
+        display: block;
+        max-width: 300px;
+        /* 화면 줄었을 때 대비 */
+        z-index: 999;
+    }
+
+    .menuhome img {
+        width: 5vh;
+        height: auto;
+        display: block;
+        /* 여백 제거 */
+    }
+
+
+    .mobile-menu-imgs1 {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 5rem;
+        /* 필요 시 조절, 메뉴버튼 아래로 조금 띄우기 */
+        right: 0;
+        /* 오른쪽 정렬 핵심 */
+        z-index: 1000;
+        width: fit-content;
+        align-items: flex-end;
+    }
+
+    .mobile-menu-imgs1 a {
+        position: relative;
+        /* width: 50%; */
+        width: auto;
+        text-align: right;
+    }
+
+    .mobile-menu-imgs1 img {
+        max-width: 150px;
+        height: auto;
+    }
+
+    .mobile-menu-imgs1.active {
+        display: block;
+        /* 클래스 active가 붙으면 보여짐 */
+    }
+
+    .mobile-menu-imgs1 img.bg1,
+    .mobile-menu-imgs1 img.bg2,
+    .mobile-menu-imgs1 img.bg3,
+    .mobile-menu-imgs1 img.bg4,
+    .mobile-menu-imgs1 img.bg5 {
+        width: 50vw;
+        /* 원하는 절대 단위로 */
+        max-width: 300px;
+        /* 필요 시 최대값 제한 */
+        height: auto;
+        /* 비율 유지 */
+        display: block;
+        /* 여백 제거 */
+    }
+
+    .bg5 {
+        position: relative;
+    }
+
+    .social-text2 {
+        display: block;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.4rem;
+        color: rgb(0, 0, 0);
+        pointer-events: auto;
+        margin-bottom: 3%;
+    }
+
+    .social-text2 a {
+        line-height: 0.2;
+    }
+
+    .social-text2 a:hover {
+        text-decoration: underline;
+    }
+
+    .home-button img {
+        width: 10vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2000;
+
+    }
+
+    .let {
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+        width: 100vw;
+        /* 화면 전체 너비 */
+        max-width: 7000px;
+        /* 전체 최대 너비 제한 */
+    }
+
+    .let1 {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 20%;
+        margin-left: 1vh;
+        width: 20%;
+        /* 2:8 비율 중 2 */
+        margin-top: 12vh;
+        /* 기존 margin 유지 */
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        height: 100%;
+        /* let 높이에서 margin-top과 여백 빼기 */
+        max-height: 1200px;
+        /* 최대 높이 제한 추가 */
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 15px;
+        border-right: 1px solid #ccc;
+        box-sizing: border-box;
+        scrollbar-width: none;
+        /* Firefox */
+        flex-grow: 1;
+        /* 남은 공간 모두 차지 */
+    }
+
+    .let1 img {
+        width: 100%;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .let1 a {
+        display: block;
+        /* a 태그를 블록으로 만들면 이미지가 정확히 꽉 참 */
+        margin: 0;
+        /* 기본 마진 제거 */
+        padding: 0;
+        /* 기본 패딩 제거 */
+    }
+
+    .preview {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 70%;
+        width: 80%;
+        /* 2:8 비율 중 8 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        overflow: hidden;
+        /* 미리보기 영역에서 스크롤 제거 */
+        margin-bottom: 10%;
+    }
+
+    .preview img {
+        max-width: 100%;
+        max-height: 90%;
+        object-fit: contain;
+    }
+}
